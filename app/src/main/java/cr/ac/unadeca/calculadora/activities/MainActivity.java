@@ -74,16 +74,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.r:
                 rta=int1-int2;
+                result = rta;
                 signo="-";
                 guardar();
                 break;
             case R.id.m:
                 rta=int1*int2;
+                result = rta;
                 signo="*";
                 guardar();
                 break;
             case R.id.d:
                 rta=int1/int2;
+                result = rta;
                 signo="/";
                 guardar();
                 break;
