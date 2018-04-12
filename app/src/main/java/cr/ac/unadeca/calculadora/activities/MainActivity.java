@@ -1,6 +1,7 @@
 package cr.ac.unadeca.calculadora.activities;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -22,11 +23,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     String signo;
     int result;
 
+    MediaPlayer mp;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mp =MediaPlayer.create(this, R.raw.bambu_1);
         n1 = findViewById(R.id.n1);
         n2 = findViewById(R.id.n2);
 
@@ -71,23 +75,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 result = rta;
                 signo="+";
                 guardar();
+                mp.start();
                 break;
             case R.id.r:
                 rta=int1-int2;
                 result = rta;
                 signo="-";
                 guardar();
+                mp.start();
                 break;
             case R.id.m:
                 rta=int1*int2;
                 result = rta;
                 signo="*";
                 guardar();
+                mp.start();
                 break;
             case R.id.d:
                 rta=int1/int2;
                 result = rta;
                 signo="/";
+                mp.start();
                 guardar();
                 break;
         }
