@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button s, r, m, d, p;
     TextView resultado;
     String signo;
-    int result;
+    double result;
 
     MediaPlayer mp;
 
@@ -64,10 +64,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String Cifra1 = n1.getText().toString();
         String Cifra2 = n2.getText().toString();
 
-        int int1=Integer.parseInt(Cifra1);
-        int int2=Integer.parseInt(Cifra2);
+        double int1=Double.parseDouble(Cifra1);
+        double int2=Double.parseDouble(Cifra2);
 
-        int rta=0;
+        double rta=0;
 
         switch (v.getId()){
             case R.id.s:

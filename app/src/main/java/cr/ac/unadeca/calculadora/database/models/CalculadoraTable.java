@@ -22,5 +22,5 @@ public class CalculadoraTable extends BaseModel{
    @Column
     public  String integer2;
    @Column
-    public int resultado;
+    public double resultado;
 }
